@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Penjualan</title>
-    <link rel="stylesheet" href="{{asset('assets/css/home.css')}}">
+    <title>kasir.com</title>
+    <link rel="stylesheet" href="{{asset('assets/css/produk.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/boostrap.css')}}">
 </head>
 
@@ -19,8 +19,8 @@
         <tr>
           <th scope="col" class="table-warning">Penjualan ID</th>
           <th scope="col" class="table-warning">Tanggal Penjualan</th>
-          <th scope="col" class="table-warning">Alamat Pelanggan</th>
-          <th scope="col" class="table-warning">Pelanggan ID</th>
+          <th scope="col" class="table-warning">Nama Pelanggan</th>
+          <th scope="col" class="table-warning">Total Harga</th>
           <th scope="col" class="table-warning">Detail</th>
         </tr>
       </thead>
@@ -29,8 +29,8 @@
         <tr>
         <td>{{$penjualan->penjualan_id}}</td>
         <td>{{$penjualan->tanggal_penjualan}}</td>
-        <td>{{$penjualan->alamat_pelanggan}}</td>
-        <td>{{$penjualan->pelanggan_id}}</td>
+        <td>{{$penjualan->nama_pelanggan}}</td>
+        <td>{{$penjualan->TotalHarga}}</td>
         <td class="table-secondary">
             <a href="/detail-penjualan/{{$penjualan->penjualan_id}}" class="btn btn-primary">detail</a>
           </td>

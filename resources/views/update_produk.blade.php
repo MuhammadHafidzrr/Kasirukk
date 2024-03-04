@@ -11,7 +11,17 @@
 <body>
     @include('layouts.sidebar')
     <h2>Form Update Produk</h2>
-    <form method="post" enctype="multipart/form-data">
+
+    @error('nama_produk')
+        <div class="alert alert-danger" role="alert" style="text-align: center; width:50%; margin:auto">kalimat mencapai batas</div>
+        <script>
+               setTimeout(function () {
+                   document.querySelector('.alert').style.display = 'none';
+               }, 3000); // Menyembunyikan alert setelah 3 detik
+           </script>
+          @enderror('nama_produk')
+
+    <form method="post" action="" enctype="multipart/form-data">
         @method('post')
         @csrf
         <label for="namaProduk">Nama Produk:</label>
@@ -26,9 +36,9 @@
         <input type="number" id="stok" name="stok" placeholder="{{$produk->stok}}">
         <br><br>
 
-        <input type="submit" value="Tambah Produk">
+        <input type="submit" value="Update Produk"><br><br>
+        <a href="{{ url('produk') }}" type="button" class="btn btn-warning kembali">Kembali</a>
     </form>
-    <a href="{{'home'}}" type="button" class="btn btn-success kembali">Kembali</a>
 </body>
 
 </html>

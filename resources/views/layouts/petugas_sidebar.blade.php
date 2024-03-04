@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
-  <title>kasir</title>
+  <title>Side Navbar</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -25,24 +25,19 @@
         <a href="#">KASIR</a>
       </header>
       <ul class="nav">
-        <li>
-          <a href="{{ url('index') }}">
-          <i class="fa-solid fa-shop"></i> Dashboard
+      <li>
+          <a href="{{ url('dashboard') }}">
+          <i class="fa-solid fa-shop"></i>Dashboard
           </a>
         </li>
-       <li>
-          <a href="{{ url('produk') }}">
+        <li>
+          <a href="{{ url('home') }}">
           <i class="fa-solid fa-box-archive"></i> Data Produk
           </a>
         </li>
         <li>
           <a href="{{ url('pelanggan') }}">
           <i class="fa-solid fa-user"></i> Data Pelanggan
-          </a>
-        </li>
-        <li>
-          <a href="{{ url('karyawan') }}">
-          <i class="fa-solid fa-user"></i>Data Karyawan
           </a>
         </li>
         <li>
@@ -65,14 +60,13 @@
     <!-- Content -->
     <div id="content">
       <nav class="navbar navbar-default">
-        <div class="container-fluid" style="height:20px; ">
-        <li style="list-style: none;text-align:right;position:relative; top:1rem;" ><a style="text-decoration: none; color:black">{{Auth::user()->username}} {{Auth::user()->level}}</a></li>
+        <div class="container-fluid">
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="#"><i class="zmdi zmdi-notifications text-danger"></i>
               </a>
             </li>
-           
+            <li><a href="#">{{Auth::user()->username}} {{Auth::user()->level}}</a></li>
           </ul>
         </div>
       </nav>
