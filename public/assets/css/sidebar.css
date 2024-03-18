@@ -32,7 +32,7 @@ body {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #37474F;
+  background: #0145ff;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -40,7 +40,7 @@ body {
 }
 
 #sidebar header {
-  background-color: #263238;
+  background-color: #0e1214;
   font-size: 20px;
   line-height: 52px;
   text-align: center;
