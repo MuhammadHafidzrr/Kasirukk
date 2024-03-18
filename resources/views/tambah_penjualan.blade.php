@@ -35,12 +35,12 @@
             <!-- Add the following script for SweetAlert -->
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script>
-                if (session('info') && (session('info') == 'Produk tidak ditemukan' || session('info') == 'Pelanggan tidak ditemukan'))
+                @if (session('info') && (session('info') == 'Produk tidak ditemukan' || session('info') == 'Pelanggan tidak ditemukan'))
                     Swal.fire({
                         title: "{{ session('info') }}",
                         icon: "error"
                     });
-                endif
+                @endif
             </script>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Jumlah Produk</label>
